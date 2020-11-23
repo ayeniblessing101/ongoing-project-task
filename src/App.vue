@@ -4,7 +4,7 @@
     <span v-if="loadingMessage" class="loadingMessage">{{
       loadingMessage
     }}</span>
-    <div v-if="projects !== {}">
+    <div v-else>
       <Projects :projectsData="projects" />
     </div>
   </div>

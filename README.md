@@ -1,24 +1,24 @@
 # ongoing-projects
 
-## Project setup
+This recreates a table displaying ongoing projects
+
+## Quick Start
+
+1. Clone this repository
+
 ```
-yarn install
+git clone https://github.com/ayeniblessing101/ongoing-project-task.git
+cd main
 ```
 
-### Compiles and hot-reloads for development
+2. Install the npm packages
+
 ```
-yarn serve
+npm install
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
+3. Run the app!
 
-### Lints and fixes files
 ```
-yarn lint
+npm run serve
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

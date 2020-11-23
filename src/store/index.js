@@ -29,7 +29,7 @@ const actions = {
   async getProjectsAction({ commit }) {
     try {
       commit(SET_LOADING_MESSAGE, "Getting ongoing projects. Please wait...");
-      const projects = await data.getOngoingProjectsData();
+      const projects = await data.getProjectsData();
       commit(GET_PROJECTS, projects);
       commit(SET_LOADING_MESSAGE, "");
     } catch (error) {

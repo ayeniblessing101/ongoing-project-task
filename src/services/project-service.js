@@ -2,11 +2,11 @@ import * as axios from "axios";
 
 const url = "https://244b8df3-7491-4cfd-a48b-267f19446372.mock.pstmn.io/";
 
-const getOngoingProjectsData = async () => {
+const getProjectsData = async () => {
   try {
     const response = await axios.get(url);
-    const ongoingProjectsData = response.data;
-    return ongoingProjectsData;
+    const projectsData = response.data;
+    return projectsData;
   } catch (error) {
     if (error.response && error.response.status) {
       switch (error.response.status) {
@@ -24,5 +24,5 @@ const getOngoingProjectsData = async () => {
 };
 
 export const data = {
-  getOngoingProjectsData,
+  getProjectsData,
 };

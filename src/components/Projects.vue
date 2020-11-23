@@ -35,9 +35,7 @@ export default {
   },
 
   data() {
-    return {
-      projects: this.projectsData.data,
-    };
+    return {};
   },
 };
 </script>

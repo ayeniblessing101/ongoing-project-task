@@ -1,4 +1,4 @@
-# ongoing-projects
+# Ongoing-projects
 
 This recreates a table displaying ongoing projects
 

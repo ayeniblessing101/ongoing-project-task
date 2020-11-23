@@ -1,42 +1,33 @@
 <template>
   <div id="container">
     <span v-if="errorMessage" class="errorMessage">{{ errorMessage }}</span>
-    <div v-else>
-      <div v-if="projectsData">
-        <Projects :projectsData="projectsData" />
-      </div>
-      <span v-else class="loadingMessage">{{ message }}</span>
+    <span v-if="loadingMessage" class="loadingMessage">{{
+      loadingMessage
+    }}</span>
+    <div v-if="projects !== {}">
+      <Projects :projectsData="projects" />
     </div>
   </div>
 </template>
 
 <script>
-import { data } from "../src/services/project-service";
 import Projects from "@/components/Projects";
+import { mapActions, mapState } from "vuex";
 export default {
   name: "App",
   components: { Projects },
 
-  data() {
-    return {
-      projectsData: undefined,
-      message: "",
-      errorMessage: "",
-    };
-  },
   async created() {
     await this.loadProjectsData();
   },
   methods: {
+    ...mapActions(["getProjectsAction"]),
     async loadProjectsData() {
-      try {
-        this.message = "Getting all ongoing projects, please wait...";
-        this.projectsData = await data.getOngoingProjectsData();
-        this.message = "";
-      } catch (error) {
-        this.errorMessage = error;
-      }
+      await this.getProjectsAction();
     },
+  },
+  computed: {
+    ...mapState(["projects", "loadingMessage", "errorMessage"]),
   },
 };
 </script>

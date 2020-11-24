@@ -24,6 +24,18 @@ div.table-container {
       position: -webkit-sticky; /* Safari */
       position: sticky;
       top: 0;
+
+      i.arrow {
+        border: solid #ffffff;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        margin-left: 15px;
+      }
+      i.down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
     }
     th:first-child {
       border-top-left-radius: 10px;

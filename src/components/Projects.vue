@@ -7,7 +7,7 @@
         <th>Main Contractor</th>
         <th>Area</th>
         <th>State</th>
-        <th>Status</th>
+        <th>Status <i class="arrow down"></i></th>
         <th>Sector</th>
       </tr>
       <tr v-for="project in projectsData.data" :key="project.id">
